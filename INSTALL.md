@@ -1,4 +1,4 @@
-# EconomicSimulator
+# Economic Simulator
 
 ## Instructions for installation on [GENI Testbed](http://www.geni.net/)
 1. Create a slice and reserve resources using a existing RSpec
