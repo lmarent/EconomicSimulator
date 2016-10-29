@@ -1,5 +1,5 @@
 # The Team
 
 * [Andres Marentes](//github.com/lmarent)
-* [Thiago Teixeira](//github.com/thiteixeira)
+* [Thiago Teixeira](http://people.umass.edu/tteixeira/)
 * [Tilman Wolf](http://www.ecs.umass.edu/ece/wolf/)
