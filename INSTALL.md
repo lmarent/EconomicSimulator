@@ -1,12 +1,13 @@
 # Economic Simulator
 
 ## Instructions for installation on [GENI Testbed](http://www.geni.net/)
-1. Create a slice and reserve resources using a existing RSpec
+1. Create a slice and reserve resources using an existing RSpec
     Follow these instructions:
     http://groups.geni.net/geni/wiki/HowTo/LoadAnExistingRSpec
     
-    Use the RSpec provided
-    https://github.com/lmarent/EconomicSimulator/blob/master/EconSimRSpec.xml
+    In the Choose Rspec field, drop-down menu, select the following RSpec:
+    
+    
 
     The nodes login information should be the following:
     * users
