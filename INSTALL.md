@@ -6,7 +6,7 @@
     http://groups.geni.net/geni/wiki/HowTo/LoadAnExistingRSpec
     
     In the Choose Rspec field, drop-down menu, select the following RSpec:
-    
+    ![SelectRSpec](SelectingCustomRSpec.png)
     
 
     The nodes login information should be the following:
