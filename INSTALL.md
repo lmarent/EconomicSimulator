@@ -67,7 +67,7 @@
         $ cd poco-X.Y
         $ sudo apt-get -y install cmake        
         $ cmake -DENABLE_DATA_MYSQL=ON
-        $ ./configure        $ make -s
+         $ ./configure        $ make -s
         $ sudo make -s install
         $ export LD_LIBRARY_PATH="/usr/local/lib:$LD_LIBRARY_PATH"
         
@@ -77,7 +77,7 @@
         $ autoheader
         $ autoconf
         $ automake --add-missing
-        $ ./configure
+         $ ./configure
         $ make
         $ make install
         
@@ -89,7 +89,7 @@
         $ automake --add-missing
         $ ./configure
         $ make
-        $ sudo make install
+         $ sudo make install
 
         $ cd ../network_agents_ver2/MarketPlaceServer/
         $ libtoolize
@@ -117,14 +117,18 @@
         $ cd /home/
         $ git clone https://github.com/lmarent/network_agents_ver2_python.git
         $ sudo apt-get install python-mysqldb  
+        $ sudo apt-get install python-numpy
+        $ sudo apt-get install python-scipy      
         ```
 
     * On the "database" node:
         ```
         $ sudo apt-get -y install mysql-server
         $ sudo netstat -tap | grep mysqlb 
-        
+        $ sudo apt-get install python-numpy
+        $ sudo apt-get install python-scipy        
         $ sudo apt-get install python-mysqldb
+        
         $ sudo apt-get install python-pip
         $ pip install django
         ```
