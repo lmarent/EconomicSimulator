@@ -12,7 +12,7 @@
     The nodes login information should be the following:
     * users
         ```
-        host info: ssh <username>@pc2.instageni.northwestern.edu -p <port>
+       host info: ssh <username>@pc2.instageni.northwestern.edu -p <port>
         ip: 10.10.1.1
         ```
 
@@ -22,7 +22,7 @@
          ip: 10.10.1.2
             10.10.2.1
             10.10.6.2
-        ```
+       ```
 
     * users-providers
         ```
@@ -32,7 +32,7 @@
          ```
 
     * transit-mkt
-        ```
+       ```
         host info: ssh <username>@pc2.instageni.northwestern.edu -p <port>
         ip: 10.10.3.1
             10.10.4.2
@@ -42,35 +42,32 @@
     * transit-providers
         ```
         host info: ssh <username>@pc2.instageni.northwestern.edu -p <port>
-        ip: 10.10.4.1
+       ip: 10.10.4.1
         ```
 
-    * database
+     * database
         ```
         host info: ssh \<username\>@pc2.instageni.northwestern.edu -p <port>
         ip: 10.10.5.1
             10.10.6.1
         ```
-2. Install the codebase on the nodes
-    * On the nodes "user-mkt, transit-mkt, and database":
+. Install the codebase on the nodes
+  * On the nodes "user-mkt, transit-mkt, and database":
         ```
         $ cd /home/
         $ git clone https://github.com/lmarent/network_agents_ver2.git
-        
-        $ wget http://pocoproject.org/releases/poco-1.7.5/poco-1.7.5-all.tar.gz
-        
+                $ wget http://pocoproject.org/releases/poco-1.7.5/poco-1.7.5-all.tar.gz        
         $ sudo apt-get -y install openssl libssl-dev
         $ sudo apt-get -y install libiodbc2 libiodbc2-dev
         $ sudo apt-get -y install mysql-client
-        $ sudo apt-get install pkg-config
+       $ sudo apt-get install pkg-config
         
         $ make --version
         $ tar -xzvf poco-X.Y.tar
         $ cd poco-X.Y
-        $ sudo apt-get -y install cmake
+        $ sudo apt-get -y install cmake        
         $ cmake -DENABLE_DATA_MYSQL=ON
-        $ ./configure
-        $ make -s
+        $ ./configure        $ make -s
         $ sudo make -s install
         $ export LD_LIBRARY_PATH="/usr/local/lib:$LD_LIBRARY_PATH"
         
@@ -85,21 +82,6 @@
         $ make install
         
         $ cd ../network_agents_ver2/CostFunctions/
-     $ libtoolize
-$ aclocal
-$ autoheader
-$ autoconf
-$ automake --add-missing
-$ ./configure
-$ make
-$ sudo make install
-        
-        
-        
-        ```
-        Repeat the last steps in the ClockServer and Marketplace nodes:
-        ```
-        $ cd ../<AGENT>/
         $ libtoolize
         $ aclocal
         $ autoheader
@@ -107,7 +89,27 @@ $ sudo make install
         $ automake --add-missing
         $ ./configure
         $ make
-        $ make install
+        $ sudo make install
+
+        $ cd ../network_agents_ver2/MarketPlaceServer/
+        $ libtoolize
+        $ aclocal
+        $ autoheader
+        $ autoconf
+        $ automake --add-missing
+        $ ./configure
+        $ make
+        $ sudo make install
+
+        $ cd ../network_agents_ver2/ClockServer/
+        $ libtoolize
+        $ aclocal
+        $ autoheader
+        $ autoconf
+        $ automake --add-missing
+        $ ./configure
+        $ make
+        $ sudo make install
         ```
 
     * On the nodes "users, transit-providers, user-providers, and database":
