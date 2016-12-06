@@ -19,7 +19,7 @@
     * users-mkt
         ```
         host info: ssh <username>@pc2.instageni.northwestern.edu -p <port>
-        ip: 10.10.1.2
+         ip: 10.10.1.2
             10.10.2.1
             10.10.6.2
         ```
@@ -29,7 +29,7 @@
         host info: ssh <username>@pc2.instageni.northwestern.edu -p <port>
         ip: 10.10.2.2
             10.10.3.2
-        ```
+         ```
 
     * transit-mkt
         ```
@@ -83,6 +83,19 @@
         $ ./configure
         $ make
         $ make install
+        
+        $ cd ../network_agents_ver2/CostFunctions/
+     $ libtoolize
+$ aclocal
+$ autoheader
+$ autoconf
+$ automake --add-missing
+$ ./configure
+$ make
+$ sudo make install
+        
+        
+        
         ```
         Repeat the last steps in the ClockServer and Marketplace nodes:
         ```
