@@ -56,11 +56,11 @@
         ```
         $ cd /home/
         $ git clone https://github.com/lmarent/network_agents_ver2.git
-                $ wget http://pocoproject.org/releases/poco-1.7.5/poco-1.7.5-all.tar.gz        
+        $ wget http://pocoproject.org/releases/poco-1.7.5/poco-1.7.5-all.tar.gz        
         $ sudo apt-get -y install openssl libssl-dev
         $ sudo apt-get -y install libiodbc2 libiodbc2-dev
         $ sudo apt-get -y install mysql-client
-       $ sudo apt-get install pkg-config
+        $ sudo apt-get install pkg-config
         
         $ make --version
         $ tar -xzvf poco-X.Y.tar
