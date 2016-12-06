@@ -77,7 +77,7 @@
         $ autoheader
         $ autoconf
         $ automake --add-missing
-         $ ./configure
+        $ ./configure
         $ make
         $ make install
         
@@ -117,7 +117,7 @@
         $ cd /home/
         $ git clone https://github.com/lmarent/network_agents_ver2_python.git
         $ sudo apt-get install python-mysqldb  
-        $ sudo apt-get install python-numpy
+        $ sudo apt-get install python-numpy
         $ sudo apt-get install python-scipy      
         ```
 
