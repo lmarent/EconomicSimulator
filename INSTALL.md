@@ -100,12 +100,12 @@
         $ ./configure
         $ make
         $ sudo make install
-
+ 
         $ cd ../network_agents_ver2/ClockServer/
         $ libtoolize
         $ aclocal
         $ autoheader
-        $ autoconf
+         $ autoconf
         $ automake --add-missing
         $ ./configure
         $ make
@@ -141,8 +141,8 @@
         
         Data base Configuration
 
-1. Configure mysql server to accept connections from remote nodes by copying the file my.cfg into /etc/mysql
-2. Connect to the database using the sql admin user that you create during installation. For example, execute:
+       1. Configure mysql server to accept connections from remote nodes by copying the file my.cfg into /etc/mysql
+ 2. Connect to the database using the sql admin user that you create during installation. For example, execute:
 
 mysql -h 127.0.0.1 -P 3306 -u root -p
 
