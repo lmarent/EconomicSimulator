@@ -45,7 +45,7 @@
        ip: 10.10.4.1
         ```
 
-     * database
+    * database
         ```
         host info: ssh \<username\>@pc2.instageni.northwestern.edu -p <port>
         ip: 10.10.5.1
@@ -67,7 +67,7 @@
         $ cd poco-X.Y
         $ sudo apt-get -y install cmake        
         $ cmake -DENABLE_DATA_MYSQL=ON
-         $ ./configure        $ make -s
+        $ ./configure        $ make -s
         $ sudo make -s install
         $ export LD_LIBRARY_PATH="/usr/local/lib:$LD_LIBRARY_PATH"
         
@@ -89,7 +89,7 @@
         $ automake --add-missing
         $ ./configure
         $ make
-         $ sudo make install
+        $ sudo make install
 
         $ cd ../network_agents_ver2/MarketPlaceServer/
         $ libtoolize
@@ -138,6 +138,28 @@
         usr=admin
         pwd=password
         CREATE DATABASE `Network_Simulation` /*!40100 DEFAULT CHARACTER SET latin1 */;
+        
+        Data base Configuration
+
+1. Configure mysql server to accept connections from remote nodes by copying the file my.cfg into /etc/mysql
+2. Connect to the database using the sql admin user that you create during installation. For example, execute:
+
+mysql -h 127.0.0.1 -P 3306 -u root -p
+
+3. Create the database by executing in mysql
+CREATE DATABASE Network_Simulation;
+
+4. Create the admin user. This user is the owner of the database.
+
+GRANT ALL ON *.* to admin@localhost IDENTIFIED BY 'password'; 
+GRANT ALL ON *.* to admin@'%' IDENTIFIED BY 'password'; 
+
+5. Import dump files: 
+
+5.1 download the file: Dump20161201.zip located in the root of the github project. The dump files were created using the export functionality of mysql workbench.
+5.2 uncompress the file
+5.3 import the file using the data import functionality of mysql workbench.
+
         ```
         
 3. Running the code
