@@ -9,7 +9,7 @@
 
 * Competition on Virtual Network Operator (VNO) scenarios
 
-  Submitted to IEEE ICC 2017. (updates to follow).
+  Approved at IEEE ICC 2017. (updates to follow).
 
 
 See [INSTALL.md](INSTALL.md) for build instructions.
