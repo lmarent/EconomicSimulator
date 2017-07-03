@@ -53,7 +53,7 @@
         ```
 	
 2. Install the codebase on the nodes
-    * On the nodes "user-mkt, transit-mkt, and database":  
+    * On the nodes `user-mkt`, `transit-mkt`, and `database`:  
         ```
         $ cd /home/
         $ git clone https://github.com/lmarent/network_agents_ver2.git
@@ -68,7 +68,8 @@
         $ cd poco-X.Y
         $ sudo apt-get -y install cmake        
         $ cmake -DENABLE_DATA_MYSQL=ON
-        $ ./configure        $ make -s
+        $ ./configure        
+        $ make -s
         $ sudo make -s install
         $ export LD_LIBRARY_PATH="/usr/local/lib:$LD_LIBRARY_PATH"
         
@@ -91,7 +92,7 @@
         $ ./configure
         $ make
         $ sudo make install
-
+        
         $ cd ../network_agents_ver2/MarketPlaceServer/
         $ libtoolize
         $ aclocal
@@ -101,28 +102,28 @@
         $ ./configure
         $ make
         $ sudo make install
- 
-        $ cd ../network_agents_ver2/ClockServer/
-        $ libtoolize
-        $ aclocal
-        $ autoheader
-        $ autoconf
-        $ automake --add-missing
-        $ ./configure
-        $ make
-        $ sudo make install
+        
+        $ cd ../network_agents_ver2/ClockServer/
+        $ libtoolize
+        $ aclocal
+        $ autoheader
+        $ autoconf
+        $ automake --add-missing
+        $ ./configure
+        $ make
+        $ sudo make install
         ```
 
-    * On the nodes "users, transit-providers, user-providers, and database":    
+    * On the nodes `users`, `transit-providers`, `user-providers`, and `database`:    
         ```
         $ cd /home/
         $ git clone https://github.com/lmarent/network_agents_ver2_python.git
         $ sudo apt-get install python-mysqldb  
-        $ sudo apt-get install python-numpy
-        $ sudo apt-get install python-scipy      
+        $ sudo apt-get install python-numpy
+        $ sudo apt-get install python-scipy      
         ```
 
-    * On the "database" node:    
+    * On the `database` node:    
         ```
         $ sudo apt-get -y install mysql-server
         $ sudo netstat -tap | grep mysqlb 
@@ -134,7 +135,7 @@
         $ pip install django
         ```
         
-    * On the "database" node: Setup the database    
+    * On the `database` node: Setup the database    
         ```
         usr=admin
         pwd=password
@@ -160,12 +161,11 @@
 	   5.1 download the file: Dump20161201.zip located in the root of the github project. The dump files were created using the export functionality of mysql workbench.
 	   5.2 uncompress the file
 	   5.3 import the file using the data import functionality of mysql workbench.
-
         ```
 
 3. Configure properties files on nodes
 
-    * On the "database" node: Setup the database    
+    * On the `database` node: Setup the database    
         ```
         Modify the file ClockServer.properties
 
