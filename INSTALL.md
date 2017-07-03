@@ -118,20 +118,14 @@
         ```
         $ cd /home/
         $ git clone https://github.com/lmarent/network_agents_ver2_python.git
-        $ sudo apt-get install python-mysqldb  
-        $ sudo apt-get install python-numpy
-        $ sudo apt-get install python-scipy      
+	$ sudo apt-get install python-pip 
+        $ pip install MySQL-python numpy scipy    
         ```
 
     * On the `database` node:    
         ```
         $ sudo apt-get -y install mysql-server
-        $ sudo netstat -tap | grep mysqlb 
-        $ sudo apt-get install python-numpy
-        $ sudo apt-get install python-scipy        
-        $ sudo apt-get install python-mysqldb
-        
-        $ sudo apt-get install python-pip
+        $ sudo netstat -tap | grep mysqlb         
         $ pip install django
         ```
         
@@ -169,7 +163,7 @@
         ```
         Modify the file ClockServer.properties
         
-        cd /home/lamarent/network_agents_ver2/ClockServer/src
+        cd $HOME/network_agents_ver2/ClockServer/src
         nano ClockServer.properties
         
         The file should be configured in the following way
@@ -203,7 +197,7 @@
         ```
         Modify the file MarketPlaceServer.properties
         
-        cd /home/lamarent/network_agents_ver2/MarketPlaceServer/src
+        cd $HOME/network_agents_ver2/MarketPlaceServer/src
         nano MarketPlaceServer.properties
         
         \# --------------------------------
@@ -237,7 +231,7 @@
         ```
         Modify the file MarketPlaceServer.properties
         
-        cd /home/lamarent/network_agents_ver2/MarketPlaceServer/src
+        cd $HOME/network_agents_ver2/MarketPlaceServer/src
         nano MarketPlaceServer.properties
         
         \# --------------------------------
@@ -271,7 +265,7 @@
         ```
         Modify the file agent_properties.py
         
-        cd /home/lamarent/network_agents_ver2_python/agents/foundation
+        cd $HOME/network_agents_ver2_python/agents/foundation
         nano agent_properties.py
         
         '''
@@ -321,7 +315,7 @@
         ```
         Modify the file agent_properties.py
         
-        cd /home/lamarent/network_agents_ver2_python/agents/foundation
+        cd $HOME/network_agents_ver2_python/agents/foundation
         nano agent_properties.py
         
         The file should be as the following
@@ -372,7 +366,7 @@
         ```
         Modify the file agent_properties.py
         
-        cd /home/lamarent/network_agents_ver2_python/agents/foundation
+        cd $HOME/network_agents_ver2_python/agents/foundation
         nano agent_properties.py
         
         '''
