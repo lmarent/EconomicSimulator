@@ -51,8 +51,9 @@
         ip: 10.10.5.1
             10.10.6.1
         ```
+	
 2. Install the codebase on the nodes
-  * On the nodes "user-mkt, transit-mkt, and database":
+    * On the nodes "user-mkt, transit-mkt, and database":  
         ```
         $ cd /home/
         $ git clone https://github.com/lmarent/network_agents_ver2.git
@@ -105,14 +106,14 @@
         $ libtoolize
         $ aclocal
         $ autoheader
-         $ autoconf
+        $ autoconf
         $ automake --add-missing
         $ ./configure
         $ make
         $ sudo make install
         ```
 
-    * On the nodes "users, transit-providers, user-providers, and database":
+    * On the nodes "users, transit-providers, user-providers, and database":    
         ```
         $ cd /home/
         $ git clone https://github.com/lmarent/network_agents_ver2_python.git
@@ -121,7 +122,7 @@
         $ sudo apt-get install python-scipy      
         ```
 
-    * On the "database" node:
+    * On the "database" node:    
         ```
         $ sudo apt-get -y install mysql-server
         $ sudo netstat -tap | grep mysqlb 
@@ -133,7 +134,7 @@
         $ pip install django
         ```
         
-    * On the "database" node: Setup the database
+    * On the "database" node: Setup the database    
         ```
         usr=admin
         pwd=password
@@ -164,7 +165,7 @@
 
 3. Configure properties files on nodes
 
-    * On the "database" node: Setup the database
+    * On the "database" node: Setup the database    
         ```
         Modify the file ClockServer.properties
 
@@ -196,10 +197,9 @@
 
 	# If not specified it adds demand/ as the subdirectory ( it must finish with /).
 	demand_directory=demand/
-        
         ```
     
-    * On the "transit-marketplace" node:
+    * On the "transit-marketplace" node:    
         ```
         Modify the file MarketPlaceServer.properties
 
@@ -233,7 +233,7 @@
 	pareto_fronts_to_send=2
         ```
 
-    * On the "user-marketplace" node:
+    * On the "user-marketplace" node:    
         ```
         Modify the file MarketPlaceServer.properties
 
@@ -267,7 +267,7 @@
 	pareto_fronts_to_send=2
         ```
 
-    * On the "transit-providers" node:
+    * On the "transit-providers" node:    
         ```
         Modify the file agent_properties.py
         
@@ -318,7 +318,7 @@
 
         ```
 
-    * On the "users-providers" node:
+    * On the "users-providers" node:    
         ```
         Modify the file agent_properties.py
 
@@ -369,7 +369,7 @@
 	result_directory = 'results/'        
         ```
 
-    * On the "users" node:
+    * On the "users" node:    
         ```
         Modify the file agent_properties.py
 
