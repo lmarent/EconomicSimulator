@@ -55,6 +55,7 @@
 2. Install the codebase on the nodes
     * On the nodes `user-mkt`, `transit-mkt`, and `database`:  
         ```
+        sudo apt-get update
         sudo apt-get -y install openssl libssl-dev
         sudo apt-get -y install libiodbc2 libiodbc2-dev
         sudo apt-get -y install mysql-client
