@@ -55,18 +55,21 @@
 2. Install the codebase on the nodes
     * On the nodes `user-mkt`, `transit-mkt`, and `database`:  
         ```
-        cd /home/
-        git clone https://github.com/lmarent/network_agents_ver2.git
-        wget http://pocoproject.org/releases/poco-1.7.5/poco-1.7.5-all.tar.gz        
         sudo apt-get -y install openssl libssl-dev
         sudo apt-get -y install libiodbc2 libiodbc2-dev
         sudo apt-get -y install mysql-client
-        sudo apt-get install pkg-config
+        sudo apt-get install pkg-config        
+        sudo apt-get -y install cmake  
+        
+        POCO_VERSION=1.7.5
+        cd /home/
+        git clone https://github.com/lmarent/network_agents_ver2.git
+        wget http://pocoproject.org/releases/poco-$POCO_VERSION/poco-$POCO_VERSION-all.tar.gz        
         
         make --version
-        tar -xzvf poco-X.Y.tar
-        cd poco-X.Y
-        sudo apt-get -y install cmake        
+        tar -xzvf poco-$POCO_VERSION-all.tar
+        rm poco-$POCO_VERSION-all.tar.gz
+        cd poco-$POCO_VERSION-all      
         cmake -DENABLE_DATA_MYSQL=ON
         ./configure        
         make -s
