@@ -12,4 +12,4 @@
   [IEEE ICC 2017 paper](http://ieeexplore.ieee.org/document/7996957/)
 
 
-See [INSTALL.md](INSTALL.md) for build instructions.
+See [INSTALL.md](INSTALL.md) for build instructions on GENI. Optional implementation with Mininet [INSTALL_MN.md](./INSTALL_MN.md)

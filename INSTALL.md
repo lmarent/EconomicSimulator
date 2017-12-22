@@ -55,78 +55,78 @@
 2. Install the codebase on the nodes
     * On the nodes `user-mkt`, `transit-mkt`, and `database`:  
         ```
-        $ cd /home/
-        $ git clone https://github.com/lmarent/network_agents_ver2.git
-        $ wget http://pocoproject.org/releases/poco-1.7.5/poco-1.7.5-all.tar.gz        
-        $ sudo apt-get -y install openssl libssl-dev
-        $ sudo apt-get -y install libiodbc2 libiodbc2-dev
-        $ sudo apt-get -y install mysql-client
-        $ sudo apt-get install pkg-config
+        cd /home/
+        git clone https://github.com/lmarent/network_agents_ver2.git
+        wget http://pocoproject.org/releases/poco-1.7.5/poco-1.7.5-all.tar.gz        
+        sudo apt-get -y install openssl libssl-dev
+        sudo apt-get -y install libiodbc2 libiodbc2-dev
+        sudo apt-get -y install mysql-client
+        sudo apt-get install pkg-config
         
-        $ make --version
-        $ tar -xzvf poco-X.Y.tar
-        $ cd poco-X.Y
-        $ sudo apt-get -y install cmake        
-        $ cmake -DENABLE_DATA_MYSQL=ON
-        $ ./configure        
-        $ make -s
-        $ sudo make -s install
-        $ export LD_LIBRARY_PATH="/usr/local/lib:$LD_LIBRARY_PATH"
+        make --version
+        tar -xzvf poco-X.Y.tar
+        cd poco-X.Y
+        sudo apt-get -y install cmake        
+        cmake -DENABLE_DATA_MYSQL=ON
+        ./configure        
+        make -s
+        sudo make -s install
+        export LD_LIBRARY_PATH="/usr/local/lib:$LD_LIBRARY_PATH"
         
-        $ cd ../network_agents_ver2/foundation/
-        $ libtoolize
-        $ aclocal
-        $ autoheader
-        $ autoconf
-        $ automake --add-missing
-        $ ./configure
-        $ make
-        $ make install
+        cd ../network_agents_ver2/foundation/
+        libtoolize
+        aclocal
+        autoheader
+        autoconf
+        automake --add-missing
+        ./configure
+        make
+        make install
         
-        $ cd ../network_agents_ver2/CostFunctions/
-        $ libtoolize
-        $ aclocal
-        $ autoheader
-        $ autoconf
-        $ automake --add-missing
-        $ ./configure
-        $ make
-        $ sudo make install
+        cd ../network_agents_ver2/CostFunctions/
+        libtoolize
+        aclocal
+        autoheader
+        autoconf
+        automake --add-missing
+        ./configure
+        make
+        sudo make install
         
-        $ cd ../network_agents_ver2/MarketPlaceServer/
-        $ libtoolize
-        $ aclocal
-        $ autoheader
-        $ autoconf
-        $ automake --add-missing
-        $ ./configure
-        $ make
-        $ sudo make install
+        cd ../network_agents_ver2/MarketPlaceServer/
+        libtoolize
+        aclocal
+        autoheader
+        autoconf
+        automake --add-missing
+        ./configure
+        make
+        sudo make install
         
-        $ cd ../network_agents_ver2/ClockServer/
-        $ libtoolize
-        $ aclocal
-        $ autoheader
-        $ autoconf
-        $ automake --add-missing
-        $ ./configure
-        $ make
-        $ sudo make install
+        cd ../network_agents_ver2/ClockServer/
+        libtoolize
+        aclocal
+        autoheader
+        autoconf
+        automake --add-missing
+        ./configure
+        make
+        sudo make install
         ```
 
     * On the nodes `users`, `transit-providers`, `user-providers`, and `database`:    
         ```
-        $ cd /home/
-        $ git clone https://github.com/lmarent/network_agents_ver2_python.git
-	$ sudo apt-get install python-pip 
-        $ pip install MySQL-python numpy scipy    
+        cd /home/
+        git clone https://github.com/lmarent/network_agents_ver2_python.git
+	    sudo apt-get install python-pip 
+        pip install MySQL-python numpy scipy    
         ```
 
     * On the `database` node:    
         ```
-        $ sudo apt-get -y install mysql-server
-        $ sudo netstat -tap | grep mysqlb         
-        $ pip install django
+        sudo apt-get -y install mysql-server
+        sudo netstat -tap | grep mysqlb         
+        pip install django
         ```
         
     * On the `database` node: Setup the database    
@@ -415,37 +415,37 @@
 
     1. On the `Database` VM: 
         ```
-        $ sudo /etc/init.d/mysql start
-        $ cd /home/network_agents_ver2/ClockServer/src
-        $ ./ClockServer
+        sudo /etc/init.d/mysql start
+        cd /home/network_agents_ver2/ClockServer/src
+        ./ClockServer
         ```
     
     2. On the `Transit Marketplace` VM:
         ```
-        $ cd /home/network_agents_ver2/MarketPlaceServer/src
-        $ ./MarketPlaceServer
+        cd /home/network_agents_ver2/MarketPlaceServer/src
+        ./MarketPlaceServer
         ```
     
     3. On the `Users Marketplace` VM:
         ```
-        $ cd /home/network_agents_ver2/MarketPlaceServer/src
-        $ ./MarketPlaceServer
+        cd /home/network_agents_ver2/MarketPlaceServer/src
+        ./MarketPlaceServer
         ```
     
     4. On the `Transit Provider` VM:
         ```
-        $ cd /home/network_agents_ver2_python/agents
-        $ python Provider.py
+        cd /home/network_agents_ver2_python/agents
+        python Provider.py
         ```    
     
     5. On the `User Provider` VM:
         ```
-        $ cd /home/network_agents_ver2_python/agents
-        $ python ProviderEdge.py
+        cd /home/network_agents_ver2_python/agents
+        python ProviderEdge.py
         ```
     
     6. On the `Users` VM:
         ```
-        $ cd /home/network_agents_ver2_python/agents
-        $ python Consumers.py
+        cd /home/network_agents_ver2_python/agents
+        python Consumers.py
         ```
