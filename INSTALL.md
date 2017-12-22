@@ -63,7 +63,7 @@
         sudo apt-get install pkg-config        
         sudo apt-get -y install cmake  
         
-        POCO_VERSION=1.7.5
+        POCO_VERSION=1.8.0
         cd /home/
         git clone https://github.com/lmarent/network_agents_ver2.git
         wget http://pocoproject.org/releases/poco-$POCO_VERSION/poco-$POCO_VERSION-all.tar.gz        

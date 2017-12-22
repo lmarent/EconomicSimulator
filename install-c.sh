@@ -14,6 +14,7 @@ git clone https://github.com/lmarent/network_agents_ver2.git
 echo "Installing dependencies ..."
 echo "This might take a while!"
 sleep 3
+sudo apt-get update
 sudo apt-get -y install openssl libssl-dev
 sudo apt-get -y install libiodbc2 libiodbc2-dev
 sudo apt-get -y install mysql-client
@@ -21,7 +22,7 @@ sudo apt-get -y install libmysqlclient-dev
 sudo apt-get -y install pkg-config
 sudo apt-get -y install cmake   
 
-POCO_VERSION=1.7.5
+POCO_VERSION=1.8.0
 wget http://pocoproject.org/releases/poco-$POCO_VERSION/poco-$POCO_VERSION-all.tar.gz 
 make --version
 tar -xzvf poco-$POCO_VERSION-all.tar.gz
