@@ -57,7 +57,6 @@
         ```
         sudo apt-get update
         sudo apt-get -y install openssl libssl-dev
-        sudo apt-get -y install openssl libssl-dev
         sudo apt-get -y install libiodbc2 libiodbc2-dev
         sudo apt-get -y install mysql-client
         sudo apt-get install pkg-config        
@@ -69,7 +68,7 @@
         wget http://pocoproject.org/releases/poco-$POCO_VERSION/poco-$POCO_VERSION-all.tar.gz        
         
         make --version
-        tar -xzvf poco-$POCO_VERSION-all.tar
+        tar -xzvf poco-$POCO_VERSION-all.tar.gz
         rm poco-$POCO_VERSION-all.tar.gz
         cd poco-$POCO_VERSION-all      
         cmake -DENABLE_DATA_MYSQL=ON
