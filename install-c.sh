@@ -46,7 +46,7 @@ make
 make install
 sleep 3
 
-eval cd ../network_agents_ver2/CostFunctions/
+eval cd ../CostFunctions/
 libtoolize
 aclocal
 autoheader
@@ -57,7 +57,7 @@ make
 sudo make install
 sleep 3
 
-eval cd ../network_agents_ver2/MarketPlaceServer/
+eval cd ../MarketPlaceServer/
 libtoolize
 aclocal
 autoheader
@@ -68,7 +68,7 @@ make
 sudo make install
 sleep 3
 
-eval cd ../network_agents_ver2/ClockServer/
+eval cd ../ClockServer/
 libtoolize
 aclocal
 autoheader

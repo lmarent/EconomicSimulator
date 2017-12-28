@@ -87,7 +87,7 @@
         make
         make install
         
-        cd ../network_agents_ver2/CostFunctions/
+        cd ../CostFunctions/
         libtoolize
         aclocal
         autoheader
@@ -97,7 +97,7 @@
         make
         sudo make install
         
-        cd ../network_agents_ver2/MarketPlaceServer/
+        cd ../MarketPlaceServer/
         libtoolize
         aclocal
         autoheader
@@ -107,7 +107,7 @@
         make
         sudo make install
         
-        cd ../network_agents_ver2/ClockServer/
+        cd ../ClockServer/
         libtoolize
         aclocal
         autoheader
