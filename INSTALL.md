@@ -130,7 +130,8 @@
         ```
         cd /home/
         git clone https://github.com/lmarent/network_agents_ver2_python.git
-	    sudo apt-get install python-pip 
+        sudo apt-get install libmysqlclient-dev
+        sudo apt-get install python-pip 
         pip install MySQL-python numpy scipy    
         ```
 
