@@ -58,7 +58,7 @@
         sudo apt-get update
         sudo apt-get -y install openssl libssl-dev
         sudo apt-get -y install libiodbc2 libiodbc2-dev
-        sudo apt-get install unixodbc-dev -y (to verify?)
+        sudo apt-get install unixodbc-dev -y
         sudo apt-get -y install mysql-client
         sudo apt-get install pkg-config        
         sudo apt-get -y install cmake          
@@ -71,7 +71,7 @@
         make --version
         gunzip poco-$POCO_VERSION-all.tar.gz
         tar -xf poco-$POCO_VERSION-all.tar
-        rm poco-$POCO_VERSION-all.tar.gz
+        rm poco-$POCO_VERSION-all.tar
         cd poco-$POCO_VERSION-all      
         cmake -DENABLE_DATA_MYSQL=ON
         **
