@@ -81,7 +81,7 @@
         find_library(MYSQL_LIB NAMES mysqlclient_r to
         find_library(MYSQL_LIB NAMES mysqlclient
         **
-        ./configure        
+        ./configure --library-path=/usr/lib/x86_64-linux-gnu        
         make -s
         sudo make -s install
         export LD_LIBRARY_PATH="/usr/local/lib:$LD_LIBRARY_PATH"
