@@ -84,7 +84,6 @@
         ./configure --library-path=/usr/lib/x86_64-linux-gnu        
         make -s
         sudo make -s install
-        export LD_LIBRARY_PATH="/usr/local/lib:$LD_LIBRARY_PATH"
         
         cd ../network_agents_ver2/foundation/
         libtoolize
