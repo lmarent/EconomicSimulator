@@ -58,6 +58,7 @@
         sudo apt-get update
         sudo apt-get -y install openssl libssl-dev
         sudo apt-get -y install libiodbc2 libiodbc2-dev
+        sudo apt-get install unixodbc-dev -y (to verify?)
         sudo apt-get -y install mysql-client
         sudo apt-get install pkg-config        
         sudo apt-get -y install cmake          
@@ -73,6 +74,13 @@
         rm poco-$POCO_VERSION-all.tar.gz
         cd poco-$POCO_VERSION-all      
         cmake -DENABLE_DATA_MYSQL=ON
+        **
+        MySQL not found Warning!
+        Workaround:
+        Modify line 48 in the `FindMySQL.cmake` file from
+        find_library(MYSQL_LIB NAMES mysqlclient_r to
+        find_library(MYSQL_LIB NAMES mysqlclient
+        **
         ./configure        
         make -s
         sudo make -s install
