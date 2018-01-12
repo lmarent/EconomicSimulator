@@ -74,13 +74,13 @@
         rm poco-$POCO_VERSION-all.tar
         cd poco-$POCO_VERSION-all      
         cmake -DENABLE_DATA_MYSQL=ON
-        **
-        MySQL not found Warning!
-        Workaround:
-        Modify line 48 in the `FindMySQL.cmake` file from
-        find_library(MYSQL_LIB NAMES mysqlclient_r to
-        find_library(MYSQL_LIB NAMES mysqlclient
-        **
+	
+MySQL not found Warning! Workaround:
+
+Modify line 48 in the `FindMySQL.cmake` file from
+`find_library(MYSQL_LIB NAMES mysqlclient_r` to
+`find_library(MYSQL_LIB NAMES mysqlclient`
+
         ./configure --library-path=/usr/lib/x86_64-linux-gnu        
         make -s
         sudo make -s install
