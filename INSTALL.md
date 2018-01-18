@@ -138,7 +138,12 @@
         ```
         sudo apt-get -y install mysql-server
         sudo netstat -tap | grep mysqlb         
-        pip install django
+        python -m pip install "django<2"
+	
+	wget https://dev.mysql.com/get/mysql-apt-config_0.8.9-1_all.deb	
+	sudo dpkg -i mysql-apt-config_0.8.9-1_all.deb 
+	sudo apt-get update
+	sudo apt-get install mysql-workbench-community
         ```
         
     * On the `database` node: Setup the database    
