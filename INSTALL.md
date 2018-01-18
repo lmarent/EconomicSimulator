@@ -203,7 +203,7 @@
         bid_periods=7
         
         \# database configuration
-        db_host=10.10.6.1
+        db_host=127.0.0.1
         db_port=3306
         db_user=admin
         db_password=password
