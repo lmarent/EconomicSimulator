@@ -139,14 +139,14 @@
         sudo apt-get -y install mysql-server
         sudo netstat -tap | grep mysqlb         
         python -m pip install "django<2"
-	
-	wget https://dev.mysql.com/get/mysql-apt-config_0.8.9-1_all.deb	
-	sudo dpkg -i mysql-apt-config_0.8.9-1_all.deb 
-	sudo apt-get update
-	sudo apt-get install mysql-workbench-community
-	
-	wget https://github.com/lmarent/EconomicSimulator/raw/master/Dump20161201.zip
-	unzip Dump20161201.zip
+        
+        wget https://dev.mysql.com/get/mysql-apt-config_0.8.9-1_all.deb	
+        sudo dpkg -i mysql-apt-config_0.8.9-1_all.deb 
+        sudo apt-get update
+        sudo apt-get install mysql-workbench-community
+        
+        wget https://github.com/lmarent/EconomicSimulator/raw/master/Dump20161201.zip
+        unzip Dump20161201.zip
         ```
         
     * On the `database` node: Setup the database    
