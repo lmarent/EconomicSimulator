@@ -226,7 +226,7 @@
         
         \# --------------  1. Clock Server related    -------------
         
-        clock_server_address=10.10.5.1
+        clock_server_address=<database_IP_addr> # in this case 10.10.5.1
         clock_port=3333
         
         \# --------------  2. Market Place Server related    -------------
@@ -238,7 +238,7 @@
         send_information_on_interval=0
         
         \#-----------------3. Database related information  ----------------
-        db_host=10.10.5.1
+        db_host=<database_IP_addr> # in this case 10.10.5.1
         db_port=3306
         db_user=admin
         db_password=password
@@ -260,7 +260,7 @@
         
         \# --------------  1. Clock Server related    -------------
         
-        clock_server_address=10.10.6.1
+        clock_server_address=<database_IP_addr> # in this case 10.10.6.1
         clock_port=3333
         
         \# --------------  2. Market Place Server related    -------------
@@ -272,7 +272,7 @@
         send_information_on_interval=1
         
         \#-----------------3. Database related information  ----------------
-        db_host=10.10.6.1
+        db_host=<database_IP_addr> # in this case 10.10.6.1
         db_port=3306
         db_user=admin
         db_password=password
