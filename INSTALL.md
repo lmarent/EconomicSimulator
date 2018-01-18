@@ -143,10 +143,7 @@
         wget https://dev.mysql.com/get/mysql-apt-config_0.8.9-1_all.deb	
         sudo dpkg -i mysql-apt-config_0.8.9-1_all.deb 
         sudo apt-get update
-        sudo apt-get install mysql-workbench-community
-        
-        wget https://github.com/lmarent/EconomicSimulator/raw/master/Dump20161201.zip
-        unzip Dump20161201.zip
+        sudo apt-get install mysql-workbench-community        
         ```
         
     * On the `database` node: Setup the database    
@@ -173,8 +170,11 @@
         5. Import dump files: 
 
 	   5.1 download the file: Dump20161201.zip located in the root of the github project. The dump files were created using the export functionality of mysql workbench.
+          $ wget https://github.com/lmarent/EconomicSimulator/raw/master/Dump20161201.zip
 	   5.2 uncompress the file
+          $ unzip Dump20161201.zip
 	   5.3 import the file using the data import functionality of mysql workbench.
+          $ /usr/bin/mysql-workbench &
         ```
 
 3. Configure properties files on nodes
