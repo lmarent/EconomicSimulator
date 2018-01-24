@@ -180,9 +180,10 @@
 3. Configure properties files on nodes
 
     * On the `database` node: Setup the database    
-        ```
+        
         Modify the file ClockServer.properties
         
+	```
         cd $HOME/network_agents_ver2/ClockServer/src
         nano ClockServer.properties
         
@@ -214,9 +215,10 @@
         ```
     
     * On the `transit-marketplace` node:    
-        ```
+        
         Modify the file MarketPlaceServer.properties
         
+        ```
         cd $HOME/network_agents_ver2/MarketPlaceServer/src
         nano MarketPlaceServer.properties
         
