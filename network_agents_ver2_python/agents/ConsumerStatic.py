@@ -8,6 +8,8 @@ from ProviderAgentException import ProviderException
 from foundation.FoundationException import FoundationException
 from foundation.AgentServer import AgentServerHandler
 from foundation.AgentType import AgentType
+from Consumer import Consumer
+
 
 import foundation.agent_properties
 import uuid
