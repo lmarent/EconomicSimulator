@@ -111,6 +111,13 @@ class Consumer(Agent):
         for decisionVariable in (self._service)._decision_variables:
             ((self._service)._decision_variables[decisionVariable]).executeSample(self._list_vars['Random'])
 
+    def printDecisionVariables(self):
+        for decisionVariable in (self._service)._decision_variables:
+            valueSample = ((self._service)._decision_variables[decisionVariable]).getSample(DecisionVariable.PDST_VALUE)
+            logger.debug('Period: %s Agent: %s - Initilizing consumer', str(self._list_vars['Current_Period']), valueSample )
+
+
+
     '''
     The getDisutility function is responsible for assigning the consumer
     agent a disutility function from the simulation environment (
