@@ -235,6 +235,7 @@ class Consumer(Agent):
                     self._list_vars['State'] = AgentServerHandler.ACTIVATE
                     logger.debug('Agent: %s - Now in state %s' , self._list_vars['strId'], self._list_vars['State'])
                     self.exec_algorithm()
+                    self.printDecisionVariables()
                     self.lock.acquire()
                     try:
                         self._list_vars['State'] = AgentServerHandler.IDLE
