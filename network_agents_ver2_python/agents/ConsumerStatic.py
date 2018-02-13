@@ -53,7 +53,7 @@ class ConsumerStatic(Consumer):
     def __init__(self, strID, Id, serviceId, customer_seed):
         try:
             
-            super(Consumer, self).__init__(strID, Id, serviceId, customer_seed)
+            super(ConsumerStatic, self).__init__(strID, Id, serviceId, customer_seed)
             
             logger.debug('Agent: %s - Consumer Created', self._list_vars['strId'])
         except FoundationException as e:
