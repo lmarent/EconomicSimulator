@@ -94,7 +94,7 @@
         automake --add-missing
         ./configure
         make
-        make install
+        sudo make install
         
         cd ../CostFunctions/
         libtoolize
