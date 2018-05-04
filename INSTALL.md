@@ -58,7 +58,7 @@
         sudo apt-get update
         sudo apt-get -y install openssl libssl-dev
         sudo apt-get -y install libiodbc2 libiodbc2-dev
-        sudo apt-get -y install unixodbc-dev
+        #sudo apt-get -y install unixodbc-dev
         sudo apt-get -y install libmysqlclient-dev
         sudo apt-get install pkg-config        
         sudo apt-get -y install cmake          
@@ -69,8 +69,7 @@
         wget http://pocoproject.org/releases/poco-$POCO_VERSION/poco-$POCO_VERSION-all.tar.gz        
         
         make --version
-        gunzip poco-$POCO_VERSION-all.tar.gz
-        tar -xf poco-$POCO_VERSION-all.tar
+        tar -xf poco-$POCO_VERSION-all.tar.gz
         rm poco-$POCO_VERSION-all.tar
         cd poco-$POCO_VERSION-all      
         cmake -DENABLE_DATA_MYSQL=ON
@@ -79,6 +78,9 @@
         Modify line 48 in the `FindMySQL.cmake` file from
         `find_library(MYSQL_LIB NAMES mysqlclient_r` to
         `find_library(MYSQL_LIB NAMES mysqlclient`
+	
+        ODBC Not found warning! Workaround:
+        add the path `/usr/include/iodbc` in the search paths
 
         ./configure --library-path=/usr/lib/x86_64-linux-gnu        
         make -s
