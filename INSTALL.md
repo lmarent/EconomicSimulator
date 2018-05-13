@@ -150,6 +150,8 @@
         
     * On the `database` node: Setup the database    
         ```
+        Start the SQL Server
+        sudo /etc/init.d/mysql start
         usr=admin
         pwd=password
         CREATE DATABASE `Network_Simulation` /*!40100 DEFAULT CHARACTER SET latin1 */;
