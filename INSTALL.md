@@ -220,7 +220,7 @@
         
         \# If not specified it adds demand/ as the subdirectory ( it must finish with /).
         demand_directory=demand/
-        ```
+	```
     
     * On the `transit-marketplace` node:    
         
