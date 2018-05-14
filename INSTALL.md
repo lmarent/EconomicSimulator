@@ -454,6 +454,11 @@
         ```
         cd /home/network_agents_ver2/MarketPlaceServer/src
         ./MarketPlaceServer
+	
+        Troubleshooting:
+        If you get the "error while loading shared libraries" run the following commands:
+        LD_LIBRARY_PATH=/usr/local/lib
+        export LD_LIBRARY_PATH
         ```
     
     3. On the `Users Marketplace` VM:
