@@ -167,9 +167,9 @@
 
             mysql -h 127.0.0.1 -P 3306 -u root -p
 	    
-            Make sure the bind address points to the ClockServer IP
+            Make sure the bind address accepts connections from all hosts
             sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
-            bind-address    = 10.10.5.1
+            bind-address    = 0.0.0.0
 	    
             You might have to restart the daemon after this step
             sudo /etc/init.d/mysql restart
