@@ -170,6 +170,9 @@
             Make sure the bind address points to the ClockServer IP
             sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
             bind-address    = 10.10.5.1
+	    
+            You might have to restart the daemon after this step
+            sudo /etc/init.d/mysql restart
 
         3. Create the database by executing in mysql
         CREATE DATABASE Network_Simulation;
