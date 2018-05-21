@@ -166,6 +166,10 @@
         2. Connect to the database using the sql admin user that you create during installation. For example, execute:
 
             mysql -h 127.0.0.1 -P 3306 -u root -p
+	    
+            Make sure the bind address points to the ClockServer IP
+            sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
+            bind-address    = 10.10.5.1
 
         3. Create the database by executing in mysql
         CREATE DATABASE Network_Simulation;
