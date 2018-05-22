@@ -60,9 +60,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'Network_Simulation',
-        'USER': 'root',
+        'USER': 'admin',
         'PASSWORD': 'password',
-        'HOST': '192.168.2.13',
+        'HOST': '10.10.5.1',
         'PORT': '3306',
     }
 }
