@@ -1,4 +1,4 @@
-from django.conf.urls import patterns, include, url
+from django.conf.urls import include, url
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 import simulation.views
 
@@ -6,7 +6,7 @@ from django.contrib import admin
 admin.autodiscover()
 
 
-urlpatterns = patterns[
+urlpatterns = [
     # Examples:
     # url(r'^$', 'simulation_site.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
@@ -33,4 +33,4 @@ urlpatterns = patterns[
 ]
 
 print staticfiles_urlpatterns()
-urlpatterns += staticfiles_urlpatterns()
+#urlpatterns += staticfiles_urlpatterns()

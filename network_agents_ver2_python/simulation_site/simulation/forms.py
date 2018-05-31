@@ -17,6 +17,7 @@ class ProbabilityDistributionForm(forms.ModelForm):
 
     class Meta:
         model = ProbabilityDistribution
+        fields = '__all__'
 
     def formfield_for_choice_field(self, available_choices):
         currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
@@ -53,14 +54,14 @@ class ProbabilityDistributionForm(forms.ModelForm):
 # to a child model (Address)
 DiscreteProbabilityFormSet = inlineformset_factory(
     ProbabilityDistribution,
-    DiscreteProbabilityDistribution,
-)
+    DiscreteProbabilityDistribution, fields=('value', 'label', 'probability'))
 
 
 class CostFunctionForm(forms.ModelForm):
 
     class Meta:
         model = CostFunction
+        fields = '__all__'
 
     def formfield_for_choice_field(self, available_choices):
         currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
@@ -93,7 +94,6 @@ class CostFunctionForm(forms.ModelForm):
 
 # inlineformset_factory creates a Class from a parent model (Contact)
 # to a child model (Address)
-ConstinousCostFunctionFormSet = inlineformset_factory(
-    CostFunction,
-    ContinuousCostFunction,
+ContinousCostFunctionFormSet = inlineformset_factory(
+    CostFunction, ContinuousCostFunction, fields=('parameter', 'value')
 )

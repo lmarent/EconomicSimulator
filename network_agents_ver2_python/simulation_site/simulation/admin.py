@@ -112,6 +112,7 @@ class ProbabilityForm(ModelForm):
         sys.path.append(currentdir)
         file_path = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
         dir_path = file_path.split('/')
+        print dir_path
         dir_path.pop()		# remove ./simulation from the list
         dir_path.pop()		# remove ./simulation_site from the list
         probability_directory = '/'.join(dir_path)
