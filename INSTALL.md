@@ -70,8 +70,8 @@
         
         make --version
         tar -xf poco-$POCO_VERSION-all.tar.gz
-        rm poco-$POCO_VERSION-all.tar
-        cd poco-$POCO_VERSION-all      
+        rm poco-$POCO_VERSION-all.tar.gz
+        cd poco-$POCO_VERSION-all
         cmake -DENABLE_DATA_MYSQL=ON
 	
         MySQL not found Warning! Workaround:
