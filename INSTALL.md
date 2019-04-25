@@ -114,7 +114,8 @@
         automake --add-missing
         ./configure
         make
-        sudo make install
+        sudo ldconfig
+        sudo make install  # might need to comment `include_HEADERS = include` in the Makefile.am file
         
         cd ../ClockServer/
         libtoolize
