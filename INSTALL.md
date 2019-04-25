@@ -114,8 +114,8 @@
         automake --add-missing
         ./configure
         make
-        sudo ldconfig
         sudo make install  # might need to comment `include_HEADERS = include` in the Makefile.am file
+        sudo ldconfig
         
         cd ../ClockServer/
         libtoolize
@@ -126,6 +126,7 @@
         ./configure
         make
         sudo make install
+        sudo ldconfig
         ```
 
     * On the nodes `users`, `transit-providers`, `user-providers`, and `database`:    
