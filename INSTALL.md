@@ -68,6 +68,7 @@
         cd cmake-3.12.1/ 
         ./configure 
         make
+        sudo make install
         cmake --version
         
         cd /home/
