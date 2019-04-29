@@ -60,15 +60,21 @@
         sudo apt-get -y install libiodbc2 libiodbc2-dev
         #sudo apt-get -y install unixodbc-dev
         sudo apt-get -y install libmysqlclient-dev
-        sudo apt-get install pkg-config        
-        sudo apt-get -y install cmake          
+        sudo apt-get install pkg-config
+        
+        #sudo apt-get -y install cmake
+        wget http://www.cmake.org/files/v3.12/cmake-3.12.1.tar.gz 
+        tar -xvzf cmake-3.12.1.tar.gz 
+        cd cmake-3.12.1/ 
+        ./configure 
+        make
+        cmake --version
         
         cd /home/
         git clone https://github.com/lmarent/network_agents_ver2.git
         POCO_VERSION=1.8.0
-        wget http://pocoproject.org/releases/poco-$POCO_VERSION/poco-$POCO_VERSION-all.tar.gz        
+        wget http://pocoproject.org/releases/poco-$POCO_VERSION/poco-$POCO_VERSION-all.tar.gz
         
-        make --version
         tar -xf poco-$POCO_VERSION-all.tar.gz
         rm poco-$POCO_VERSION-all.tar.gz
         cd poco-$POCO_VERSION-all
@@ -82,7 +88,7 @@
         ODBC Not found warning! Workaround:
         add the path `/usr/include/iodbc` in the search paths
 
-        ./configure --library-path=/usr/lib/x86_64-linux-gnu        
+        ./configure --library-path=/usr/lib/x86_64-linux-gnu
         make -s
         sudo make -s install
         
