@@ -466,13 +466,13 @@
     1. On the `Database` VM: 
         ```
         sudo /etc/init.d/mysql start
-        cd /home/network_agents_ver2/ClockServer/src
+        cd $HOME/network_agents_ver2/ClockServer/src
         ./ClockServer
         ```
     
     2. On the `Transit Marketplace` VM:
         ```
-        cd /home/network_agents_ver2/MarketPlaceServer/src
+        cd $HOME/network_agents_ver2/MarketPlaceServer/src
         ./MarketPlaceServer
 	
         Troubleshooting:
@@ -483,24 +483,24 @@
     
     3. On the `Users Marketplace` VM:
         ```
-        cd /home/network_agents_ver2/MarketPlaceServer/src
+        cd $HOME/network_agents_ver2/MarketPlaceServer/src
         ./MarketPlaceServer
         ```
     
     4. On the `Transit Provider` VM:
         ```
-        cd /home/network_agents_ver2_python/agents
+        cd $HOME/network_agents_ver2_python/agents
         python Provider.py
         ```    
     
     5. On the `User Provider` VM:
         ```
-        cd /home/network_agents_ver2_python/agents
+        cd $HOME/network_agents_ver2_python/agents
         python ProviderEdge.py
         ```
     
     6. On the `Users` VM:
         ```
-        cd /home/network_agents_ver2_python/agents
+        cd $HOME/network_agents_ver2_python/agents
         python Consumers.py
         ```
