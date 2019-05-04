@@ -8,7 +8,7 @@
     In the Choose Rspec field, drop-down menu, select the following RSpec:
     ![SelectRSpec](SelectingCustomRSpec.png)
     
-    Change all nodes' OS to Ubuntu 16.04 LTS (VERY IMPORTANT)
+    Change all nodes' OS to Ubuntu 16.04 LTS (**VERY IMPORTANT!**)
 
     The nodes login information should be the following:
     * users
