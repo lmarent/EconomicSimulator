@@ -216,29 +216,29 @@
         nano ClockServer.properties
         
         The file should be configured in the following way
-        \# --------------------------------
-        \# ClockServer properties file
-        \# --------------------------------
+        # --------------------------------
+        # ClockServer properties file
+        # --------------------------------
         
         listening_port=3333
         name=Clock_Server
         
-        \# every interval is 4 Seconds
+        # every interval is 4 Seconds
         time_intervals=4000
         
-        \# a cycle is the time required for purchasing in the whole network of providers.
+        # a cycle is the time required for purchasing in the whole network of providers.
         intervals_per_cycle=2
         interval_for_customer_activation = 0
         bid_periods=7
         
-        \# database configuration
+        # database configuration
         db_host=127.0.0.1
         db_port=3306
         db_user=admin
         db_password=password
         db_name=Network_Simulation
         
-        \# If not specified it adds demand/ as the subdirectory ( it must finish with /).
+        # If not specified it adds demand/ as the subdirectory ( it must finish with /).
         demand_directory=demand/
 	```
     
@@ -250,16 +250,16 @@
         cd $HOME/network_agents_ver2/MarketPlaceServer/src
         nano MarketPlaceServer.properties
         
-        \# --------------------------------
-        \# MarkePlaceServer properties file
-        \# --------------------------------
+        # --------------------------------
+        # MarkePlaceServer properties file
+        # --------------------------------
         
-        \# --------------  1. Clock Server related    -------------
+        # --------------  1. Clock Server related    -------------
         
         clock_server_address=<database_IP_addr> # in this case 10.10.5.1
         clock_port=3333
         
-        \# --------------  2. Market Place Server related    -------------
+        # --------------  2. Market Place Server related    -------------
         name=Market_backhaul
         listening_port=5555
         type=market_place
@@ -267,7 +267,7 @@
         intervals_per_cycle=2
         send_information_on_interval=0
         
-        \#-----------------3. Database related information  ----------------
+        #-----------------3. Database related information  ----------------
         db_host=<database_IP_addr> # in this case 10.10.5.1
         db_port=3306
         db_user=admin
@@ -284,16 +284,16 @@
         cd $HOME/network_agents_ver2/MarketPlaceServer/src
         nano MarketPlaceServer.properties
         
-        \# --------------------------------
-        \# MarkePlaceServer properties file
-        \# --------------------------------
+        # --------------------------------
+        # MarkePlaceServer properties file
+        # --------------------------------
         
-        \# --------------  1. Clock Server related    -------------
+        # --------------  1. Clock Server related    -------------
         
         clock_server_address=<database_IP_addr> # in this case 10.10.6.1
         clock_port=3333
         
-        \# --------------  2. Market Place Server related    -------------
+        # --------------  2. Market Place Server related    -------------
         name=Market_Isp
         listening_port=5555
         type=market_place
@@ -301,7 +301,7 @@
         intervals_per_cycle=2
         send_information_on_interval=1
         
-        \#-----------------3. Database related information  ----------------
+        #-----------------3. Database related information  ----------------
         db_host=<database_IP_addr> # in this case 10.10.6.1
         db_port=3306
         db_user=admin
@@ -321,26 +321,26 @@
         '''
         This file defines the agent_properties.
         '''
-        \# ClockServer listening port and Marketplace listening port are
-        \# defined below.
+        # ClockServer listening port and Marketplace listening port are
+        # defined below.
         clock_listening_port = 3333
         mkt_place_listening_port = 5555
         
-        \# The listening ports for presenter, provider, and consumer are 
-        \# defined below.
+        # The listening ports for presenter, provider, and consumer are 
+        # defined below.
         l_port_presenter = 12000
         l_port_provider = 13000
         l_port_consumer = 14000
         
-        \# Address for the database server information
+        # Address for the database server information
         addr_database = '10.10.6.1'
         port_database = 3306
         user_database = 'admin'
         user_password = 'password'
         database_name = 'Network_Simulation'
         
-        \# Addresses for marketplace, clockserver, and own agent address
-        \# are defined below.
+        # Addresses for marketplace, clockserver, and own agent address
+        # are defined below.
         addr_mktplace_isp = '10.10.2.1'
         addr_mktplace_backhaul = '10.10.3.1'
         addr_clock_server = '10.10.6.1'
@@ -354,10 +354,10 @@
         initial_number_bids = 5
         num_periods_market_share = 3
         intervals_per_cycle = 2
-        \# This variable establishes the provider types that can be executed.
+        # This variable establishes the provider types that can be executed.
         provider_types = 'Provider'
 
-        \# directory results
+        # directory results
         result_directory = 'results/'
         ```
 
@@ -373,26 +373,26 @@
         '''
         This file defines the agent_properties.
         '''
-        \# ClockServer listening port and Marketplace listening port are
-        \# defined below.
+        # ClockServer listening port and Marketplace listening port are
+        # defined below.
         clock_listening_port = 3333
         mkt_place_listening_port = 5555
         
-        \# The listening ports for presenter, provider, and consumer are 
-        \# defined below.
+        # The listening ports for presenter, provider, and consumer are 
+        # defined below.
         l_port_presenter = 12000
         l_port_provider = 13000
         l_port_consumer = 14000
         
-        \# Address for the database server information
+        # Address for the database server information
         addr_database = '10.10.6.1'
         port_database = 3306
         user_database = 'admin'
         user_password = 'password'
         database_name = 'Network_Simulation'
         
-        \# Addresses for marketplace, clockserver, and own agent address
-        \# are defined below.
+        # Addresses for marketplace, clockserver, and own agent address
+        # are defined below.
         addr_mktplace_isp = '10.10.2.1'
         addr_mktplace_backhaul = '10.10.3.1'
         addr_clock_server = '10.10.6.1'
@@ -408,7 +408,7 @@
         intervals_per_cycle = 2
         provider_types = 'ProviderEdge,ProviderEdgeMonopoly'
         
-        \# directory results
+        # directory results
         result_directory = 'results/'        
         ```
 
@@ -422,26 +422,26 @@
         '''
         This file defines the agent_properties.
         '''
-        \# ClockServer listening port and Marketplace listening port are
-        \# defined below.
+        # ClockServer listening port and Marketplace listening port are
+        # defined below.
         clock_listening_port = 3333
         mkt_place_listening_port = 5555
         
-        \# The listening ports for presenter, provider, and consumer are 
-        \# defined below.
+        # The listening ports for presenter, provider, and consumer are 
+        # defined below.
         l_port_presenter = 12000
         l_port_provider = 13000
         l_port_consumer = 14000
         
-        \# Address for the database server information
+        # Address for the database server information
         addr_database = '10.10.6.1'
         port_database = 3306
         user_database = 'admin'
         user_password = 'password'
         database_name = 'Network_Simulation'
         
-        \# Addresses for marketplace, clockserver, and own agent address
-        \# are defined below.
+        # Addresses for marketplace, clockserver, and own agent address
+        # are defined below.
         addr_mktplace_isp = '10.10.1.2'
         addr_mktplace_backhaul = '10.10.3.1'
         addr_clock_server = '10.10.5.1'
@@ -456,7 +456,7 @@
         num_periods_market_share = 3
         intervals_per_cycle = 2
         
-        \# directory results
+        # directory results
         result_directory = 'results/'
         ```
         
