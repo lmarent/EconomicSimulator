@@ -71,7 +71,7 @@
         sudo make install
         cmake --version
         
-        cd /home/
+        cd $HOME
         git clone https://github.com/lmarent/network_agents_ver2.git
         POCO_VERSION=1.8.0
         wget http://pocoproject.org/releases/poco-$POCO_VERSION/poco-$POCO_VERSION-all.tar.gz
