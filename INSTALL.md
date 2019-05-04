@@ -155,7 +155,10 @@
         sudo dpkg -i mysql-apt-config_0.8.9-1_all.deb
         sudo apt-key adv --keyserver pgp.mit.edu --recv-keys A4A9406876FCBD3C456770C88C718D3B5072E1F5
         sudo apt-get update
-        sudo apt-get install mysql-workbench-community        
+        #sudo apt-get install mysql-workbench-community
+        wget https://downloads.mysql.com/archives/get/file/mysql-workbench-community-6.3.6-1ubu1404-amd64.deb
+        sudo dpkg --force-all -i mysql-workbench-community-6.3.6-1ubu1404-amd64.deb
+        sudo apt-get update
         ```
         
     * On the `database` node: Setup the database    
