@@ -138,7 +138,7 @@
 
     * On the nodes `users`, `transit-providers`, `user-providers`, and `database`:    
         ```
-        cd /home/
+        cd $HOME
         git clone https://github.com/lmarent/network_agents_ver2_python.git
         sudo apt-get install libmysqlclient-dev
         sudo apt-get install python-pip 
