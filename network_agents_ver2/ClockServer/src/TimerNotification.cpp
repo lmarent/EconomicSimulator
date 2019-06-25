@@ -41,13 +41,15 @@ void TimerNotification::onEndPeriod(Poco::Timer& timer)
 	app.logger().information(Poco::format("onEndPeriod - Interval:%d Period:%d", current_interval, current_period));
 
 
-	if ( (current_interval / _intervals_per_cycle) <= (*clocksys).getBidPeriods())
-		(*clocksys).broadcastPeriodStart();
-	else
+	if ( (current_interval / _intervals_per_cycle) <= (*clocksys).getBidPeriods()) {
+	  (*clocksys).broadcastPeriodStart();
+	  std::cout << "In onPeriod, current interval is " << current_interval << " periods " << (*clocksys).getBidPeriods() << std::endl;
+	}
+	else {
 		// As part of the termination process it is send to all listeners
 		// a termination message.
 		server.terminate();
-
+	}
     app.logger().information("Ending onEndPeriod");
 
 }
