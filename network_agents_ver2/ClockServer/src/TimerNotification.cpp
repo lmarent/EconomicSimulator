@@ -41,7 +41,7 @@ void TimerNotification::onEndPeriod(Poco::Timer& timer)
 	app.logger().information(Poco::format("onEndPeriod - Interval:%d Period:%d", current_interval, current_period));
 
 
-	if ( (current_interval * _intervals_per_cycle) <= (*clocksys).getBidPeriods())
+	if ( (current_interval / _intervals_per_cycle) <= (*clocksys).getBidPeriods())
 		(*clocksys).broadcastPeriodStart();
 	else
 		// As part of the termination process it is send to all listeners
