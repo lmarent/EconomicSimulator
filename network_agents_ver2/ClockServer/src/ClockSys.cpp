@@ -268,7 +268,7 @@ void ClockSys::deleteListenerBytype(std::string type, std::string listenerId)
 	{
 		// Find the specific listener id in the list.
 		std::vector<std::string>::iterator iter_list_ids;
-		for (unsigned i=0; (it->second).size(); ++i){
+		for (unsigned i=0; i < (it->second).size(); ++i){
     		if (listenerId.compare((it->second)[i]) == 0)
     			(it->second).erase((it->second).begin() + i);
 		}
